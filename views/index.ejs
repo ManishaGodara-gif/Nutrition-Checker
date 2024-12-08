@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ingredient & Nutrition Checker</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
+        <a class="navbar-brand" href="/">Nutrition Checker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="animate__animated animate__fadeInDown">Know What's in Your Food!</h1>
+        <p class="animate__animated animate__fadeInUp">Enter an ingredient to see its nutritional value and more.</p>
+        <form action="/search" method="POST" class="mt-4">
+            <div class="input-group">
+                <input type="text" name="barcode" class="form-control" placeholder="Enter barcode" required>
+                <div class="input-group-append">
+                    <button class="btn btn-primary animate__animated animate__bounceIn">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Featured Ingredients Grid Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Trending Ingredients</h2>
+        <div class="row">
+            <!-- Image Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card animate__animated animate__fadeIn">
+                    <img src="/images/product-image1.jpg" class="card-img-top" alt="Fresh Fruits and Vegetables">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Produce</h5>
+                        <p class="card-text">Discover the nutritional value of fresh fruits and vegetables.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Calories:</strong> 52 kcal per 100g</li>
+                            <li><strong>Fiber:</strong> 2.4g per 100g</li>
+                            <li><strong>Vitamin C:</strong> 20% DV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Image Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card animate__animated animate__fadeIn">
+                    <img src="/images/product-image2.jpg" class="card-img-top" alt="Balanced Meal">
+                    <div class="card-body">
+                        <h5 class="card-title">Balanced Meals</h5>
+                        <p class="card-text">Plan your perfect meal for optimal health.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Protein:</strong> 30g</li>
+                            <li><strong>Carbs:</strong> 40g</li>
+                            <li><strong>Fats:</strong> 20g</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Image Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card animate__animated animate__fadeIn">
+                    <img src="/images/product-image3.jpg" class="card-img-top" alt="Nutrition Facts">
+                    <div class="card-body">
+                        <h5 class="card-title">Nutrition Facts</h5>
+                        <p class="card-text">Decode nutrition labels to make smarter choices.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Serving Size:</strong> 1 cup</li>
+                            <li><strong>Sodium:</strong> 50mg</li>
+                            <li><strong>Sugar:</strong> 5g</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Nutrition Checker | B

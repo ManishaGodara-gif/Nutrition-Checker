@@ -1,0 +1,232 @@
+/* Body and text styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient background for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important; /* Ensures the brand text is white */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8); /* Lightened white for contrast */
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #fff; /* Bright white on hover */
+    text-decoration: underline; /* Underline for emphasis */
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Ensures toggle icon is white */
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('/images/hero_image.jpg'); /* Background image */
+    background-size: cover; /* Ensures full cover */
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.hero-section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+    z-index: -1;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.hero-section form {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.hero-section .input-group {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-section .input-group input {
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-section .input-group button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero-section .input-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Card Grid Styling */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Space between cards */
+    justify-content: center; /* Center the cards */
+    align-items: stretch; /* Ensures cards have equal height */
+    padding: 2rem;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space out card content */
+    max-width: 320px; /* Ensures consistent card width */
+    flex: 1 1 300px; /* Allows flexible resizing with a minimum width */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #007bff;
+}
+
+.card-body {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1; /* Makes the body expand to fill available space */
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    padding: 0;
+    list-style: none;
+}
+
+.card ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.2rem 0;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    background: #343a40;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}

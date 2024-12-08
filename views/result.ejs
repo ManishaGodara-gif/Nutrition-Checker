@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Result</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/result-style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <a class="navbar-brand" href="/">Nutrition Checker</a>
+    </nav>
+
+    <div class="container mt-5">
+        <% if (product) { %>
+            <h1 class="text-center text-primary mb-4"><%= product.product_name %></h1>
+            <div class="text-center">
+                <img src="<%= product.image_url || '/images/placeholder.png' %>" class="img-fluid rounded shadow" alt="<%= product.product_name %>">
+            </div>
+            <div class="mt-4">
+                <h3>Ingredients:</h3>
+                <p class="bg-light p-3 rounded"><%= product.ingredients_text || 'No ingredients available.' %></p>
+                <h3>Nutrition Facts:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Calories: <%= product.nutriments.energy_value || 'N/A' %> <%= product.nutriments.energy_unit || '' %></li>
+                    <li class="list-group-item">Fat: <%= product.nutriments.fat_value || 'N/A' %> <%= product.nutriments.fat_unit || '' %></li>
+                    <li class="list-group-item">Proteins: <%= product.nutriments.proteins_value || 'N/A' %> <%= product.nutriments.proteins_unit || '' %></li>
+                    <li class="list-group-item">Carbohydrates: <%= product.nutriments.carbohydrates_value || 'N/A' %> <%= product.nutriments.carbohydrates_unit || '' %></li>
+                </ul>
+            </div>
+        <% } else { %>
+            <h1 class="text-center text-danger">Product Not Found</h1>
+            <p class="text-center">We couldn't find the product you searched for. Please try again.</p>
+        <% } %>
+        <a href="/" class="btn btn-secondary mt-4">Back to Home</a>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Nutrition Checker</p>
+    </footer>
+</body>
+</html>
